@@ -17,6 +17,11 @@ namespace Voidwalker
 
         private void FixedUpdate()
         {
+            MovePlayer();
+        }
+
+        private void MovePlayer()
+        {
             rigidBody.AddForce(playerInput.GetMovementInput() * movementSpeed, ForceMode2D.Force);
         }
     }
