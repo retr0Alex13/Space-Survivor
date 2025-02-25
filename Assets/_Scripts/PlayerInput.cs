@@ -20,7 +20,14 @@ namespace Voidwalker
 
         private void Update()
         {
+            ReadMoveInput();
+        }
+
+        private void ReadMoveInput()
+        {
             movementInput = playerInputs.Player.Move.ReadValue<Vector2>();
         }
+
+        public Vector2 GetMovementInput() => movementInput;
     }
 }
