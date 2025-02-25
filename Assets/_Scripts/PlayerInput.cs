@@ -6,6 +6,7 @@ namespace Voidwalker
     public class PlayerInput : MonoBehaviour
     {
         private Vector2 movementInput;
+        private Vector3 mousePosition;
 
         private PlayerInputActions playerInputs;
 
@@ -21,6 +22,7 @@ namespace Voidwalker
         private void Update()
         {
             ReadMoveInput();
+            ReadMousePosition();
         }
 
         private void ReadMoveInput()
@@ -28,6 +30,16 @@ namespace Voidwalker
             movementInput = playerInputs.Player.Move.ReadValue<Vector2>();
         }
 
+        private void ReadMousePosition()
+        {
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
+
         public Vector2 GetMovementInput() => movementInput;
+
+        public Vector3 GetMousePosition()
+        {
+            return mousePosition;
+        }
     }
 }
