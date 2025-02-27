@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Voidwalker
+namespace Voidwalker.Player
 {
     public class PlayerController : MonoBehaviour
     {

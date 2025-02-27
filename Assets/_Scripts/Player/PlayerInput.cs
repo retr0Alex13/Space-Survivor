@@ -1,7 +1,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
 
-namespace Voidwalker
+namespace Voidwalker.Player
 {
     public class PlayerInput : MonoBehaviour
     {
