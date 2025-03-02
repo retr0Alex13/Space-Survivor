@@ -5,6 +5,7 @@ namespace Voidwalker.Player
 {
     public class PlayerInput : MonoBehaviour
     {
+        private bool isAttacking;
         private Vector2 movementInput;
         private Vector3 mousePosition;
 
@@ -23,6 +24,12 @@ namespace Voidwalker.Player
         {
             ReadMoveInput();
             ReadMousePosition();
+            ReadFireInput();
+        }
+
+        private void ReadFireInput()
+        {
+            isAttacking = playerInputs.Player.Attack.triggered;
         }
 
         private void ReadMoveInput()
@@ -34,6 +41,8 @@ namespace Voidwalker.Player
         {
             mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
+
+        public bool IsAttacking() => isAttacking;
 
         public Vector2 GetMovementInput() => movementInput;
 

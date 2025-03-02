@@ -2,12 +2,11 @@ using UnityEngine;
 
 namespace Voidwalker.Player
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IDamageable
     {
         [SerializeField] private float movementSpeed = 50f;
         [SerializeField] private float rotationSpeed = 10f;
         [SerializeField] private float angleOffset = 0f;
-
 
         private Rigidbody2D rigidBody;
         private PlayerInput playerInput;
@@ -33,6 +32,10 @@ namespace Voidwalker.Player
         private void Update()
         {
             RotatePlayer();
+            if (playerInput.IsAttacking())
+            {
+
+            }
         }
 
         private void RotatePlayer()
@@ -58,6 +61,11 @@ namespace Voidwalker.Player
             angle += angleOffset;
 
             targetRotation = Quaternion.Euler(0, 0, angle);
+        }
+
+        public void TakeDamage(float damage)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
