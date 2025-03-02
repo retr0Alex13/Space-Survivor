@@ -530,10 +530,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 50
-  angleOffset: 0
-  lockToZAxis: 1
   rotationSpeed: 10
-  smoothRotation: 1
+  angleOffset: 0
 --- !u!1 &2137527952
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +543,7 @@ GameObject:
   - component: {fileID: 2137527953}
   - component: {fileID: 2137527954}
   m_Layer: 0
-  m_Name: Pointer
+  m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
