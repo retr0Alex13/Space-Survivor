@@ -354,9 +354,10 @@ GameObject:
   - component: {fileID: 1815836545}
   - component: {fileID: 1815836547}
   - component: {fileID: 1815836548}
+  - component: {fileID: 1815836549}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,6 +533,20 @@ MonoBehaviour:
   movementSpeed: 50
   rotationSpeed: 10
   angleOffset: 0
+--- !u!114 &1815836549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815836542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b8a73151bbccfd41a4bd3e632dbcc6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableWeapons:
+  - {fileID: 2137527955}
 --- !u!1 &2137527952
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137527953}
   - component: {fileID: 2137527954}
+  - component: {fileID: 2137527955}
   m_Layer: 0
   m_Name: Canon
   m_TagString: Untagged
@@ -557,13 +573,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137527952}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.54, y: 0.02, z: 0}
-  m_LocalScale: {x: 0.2022, y: 0.4301, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.421, y: 0, z: 0}
+  m_LocalScale: {x: 0.43936035, y: 0.18204805, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1815836544}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2137527954
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -619,6 +635,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2137527955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137527952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4387df010b390b64591d8fcffef714e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  fireRate: 30
+  range: 5
+  ammoCapacity: 24
+  reloadTime: 2
+  laserSpeed: 15
+  laserPrefab: {fileID: 1105942081263447005, guid: 78f4cab580df57142af0c4f7762bb2b7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
