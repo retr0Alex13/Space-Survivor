@@ -1,3 +1,4 @@
+using Voidwalker.Weapons;
 using UnityEngine;
 
 namespace Voidwalker.Player
@@ -8,6 +9,8 @@ namespace Voidwalker.Player
         [SerializeField] private float rotationSpeed = 10f;
         [SerializeField] private float angleOffset = 0f;
 
+        private WeaponSystem weaponSystem;
+
         private Rigidbody2D rigidBody;
         private PlayerInput playerInput;
 
@@ -17,6 +20,7 @@ namespace Voidwalker.Player
         {
             rigidBody = GetComponent<Rigidbody2D>();
             playerInput = GetComponent<PlayerInput>();
+            weaponSystem = GetComponent<WeaponSystem>();
         }
 
         private void FixedUpdate()
@@ -34,7 +38,7 @@ namespace Voidwalker.Player
             RotatePlayer();
             if (playerInput.IsAttacking())
             {
-
+                weaponSystem.FireFromWeapon();
             }
         }
 
